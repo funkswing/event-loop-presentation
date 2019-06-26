@@ -193,12 +193,12 @@ _DEMO: Promise.resolve / setTimeout / setImmediate_
 
     
     Blocking v Non-Blocking API requests:
-    START=$(date +%s) && curl http://localhost:5000/api/reports/loop && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
-    START=$(date +%s) && curl http://localhost:5000/api/reports/loop/bmap && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
-    START=$(date +%s) && curl http://localhost:5000/api/reports/loop/seti && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
-    START=$(date +%s) && curl http://localhost:5000/api/reports/loop/bird && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
-    START=$(date +%s) && curl http://localhost:5000/api/reports/loop/native && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
-    START=$(date +%s) && curl http://localhost:5000/api/reports/loop/sett && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
+    START=$(date +%s) && curl http://localhost:3000/loop && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
+    START=$(date +%s) && curl http://localhost:3000/loop/bmap && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
+    START=$(date +%s) && curl http://localhost:3000/loop/seti && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
+    START=$(date +%s) && curl http://localhost:3000/loop/bird && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
+    START=$(date +%s) && curl http://localhost:3000/loop/native && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
+    START=$(date +%s) && curl http://localhost:3000/loop/sett && END=$(date +%s) && echo "Took: $(expr $END - $START) sec"
 </Notes>
 
 ---
