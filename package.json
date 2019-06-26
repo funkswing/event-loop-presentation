@@ -1,0 +1,27 @@
+{
+  "name": "gather-talk",
+  "version": "1.0.0",
+  "description": "Presentation hosted at - https://event-loop.funkswing.now.sh",
+  "main": "index.js",
+  "dependencies": {
+    "@hapi/hapi": "^18.3.1",
+    "@rebass/emotion": "^3.1.1",
+    "bluebird": "^3.5.5",
+    "hapi": "^18.1.0",
+    "lodash": "^4.17.11",
+    "mdx-deck": "^2.4.0"
+  },
+  "devDependencies": {
+    "@mdx-deck/export": "^2.4.0"
+  },
+  "scripts": {
+    "start": "mdx-deck -p 8000 deck.mdx",
+    "build": "npm run clean && npm run static && npm run html",
+    "clean": "rm -rf docs",
+    "static": "mkdir -p dist/static && cp -R static dist/",
+    "html": "mdx-deck build deck.mdx",
+    "pdf": "npm run static && npm run html && mdx-deck-export pdf deck.mdx"
+  },
+  "author": "",
+  "license": "ISC"
+}
