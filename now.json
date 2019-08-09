@@ -1,4 +1,10 @@
 {
   "version": 2,
-  "name": "event-loop"
+  "name": "event-loop",
+  "builds": [
+    { "src": "./dist/**", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "dist/$1" }
+  ]
 }
